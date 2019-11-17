@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://level2_finishcheck.gd" type="Script" id=1]
+[ext_resource path="res://tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://slime.tscn" type="PackedScene" id=3]
+[ext_resource path="res://person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=5]
+
+[node name="level2" type="Node2D"]
+position = Vector2( 253.777, 177.861 )
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 8, 8 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+collision_layer = 3
+format = 1
+tile_data = PoolIntArray( 0, 9, 0, 1, 11, 0, 2, 11, 0, 3, 11, 0, 4, 11, 0, 5, 11, 0, 6, 11, 0, 7, 11, 0, 8, 11, 0, 9, 11, 0, 10, 11, 0, 11, 11, 0, 12, 11, 0, 13, 11, 0, 14, 11, 0, 15, 11, 0, 16, 11, 0, 17, 11, 0, 18, 12, 0, 65536, 13, 0, 65554, 14, 0, 131072, 13, 0, 131074, 0, 0, 131076, 0, 0, 131078, 0, 0, 131080, 0, 0, 131082, 0, 0, 131084, 0, 0, 131086, 0, 0, 131088, 0, 0, 131090, 14, 0, 196608, 13, 0, 196610, 5, 0, 196624, 5, 0, 196626, 14, 0, 262144, 13, 0, 262146, 0, 0, 262148, 0, 0, 262150, 0, 0, 262152, 0, 0, 262153, 5, 0, 262154, 0, 0, 262156, 0, 0, 262158, 0, 0, 262160, 0, 0, 262162, 14, 0, 327680, 13, 0, 327682, 5, 0, 327684, 5, 0, 327694, 5, 0, 327696, 5, 0, 327698, 14, 0, 393216, 13, 0, 393218, 0, 0, 393220, 0, 0, 393222, 0, 0, 393224, 0, 0, 393226, 0, 0, 393228, 0, 0, 393230, 0, 0, 393232, 0, 0, 393234, 14, 0, 458752, 13, 0, 458754, 5, 0, 458756, 5, 0, 458766, 5, 0, 458768, 5, 0, 458770, 14, 0, 524288, 13, 0, 524290, 0, 0, 524292, 0, 0, 524294, 0, 0, 524296, 0, 0, 524297, 5, 0, 524298, 0, 0, 524300, 0, 0, 524302, 0, 0, 524304, 0, 0, 524306, 14, 0, 589824, 13, 0, 589826, 5, 0, 589840, 5, 0, 589842, 14, 0, 655360, 13, 0, 655362, 0, 0, 655364, 0, 0, 655366, 0, 0, 655368, 0, 0, 655370, 0, 0, 655372, 0, 0, 655374, 0, 0, 655376, 0, 0, 655378, 14, 0, 720896, 13, 0, 720914, 14, 0, 786432, 15, 0, 786433, 16, 0, 786434, 16, 0, 786435, 16, 0, 786436, 16, 0, 786437, 16, 0, 786438, 16, 0, 786439, 16, 0, 786440, 16, 0, 786441, 16, 0, 786442, 16, 0, 786443, 16, 0, 786444, 16, 0, 786445, 16, 0, 786446, 16, 0, 786447, 16, 0, 786448, 16, 0, 786449, 16, 0, 786450, 17, 0 )
+
+[node name="slime" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480.54, 731.41 )
+
+[node name="slime2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 984.047, 471.707 )
+
+[node name="slime3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 475.24, 340.971 )
+
+[node name="slime4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 733.177, 215.536 )
+
+[node name="slime5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 95.4375, 86.7614 )
+
+[node name="person" parent="." instance=ExtResource( 4 )]
+position = Vector2( 607.821, 419.837 )
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="hud" parent="canvas" instance=ExtResource( 5 )]

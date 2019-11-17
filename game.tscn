@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://slime.tscn" type="PackedScene" id=2]
+[ext_resource path="res://person.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=4]
+
+[node name="gametest" type="Node2D"]
+position = Vector2( 253.777, 177.861 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 8, 8 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+collision_layer = 3
+format = 1
+tile_data = PoolIntArray( -196612, 9, 0, -196611, 11, 0, -196610, 11, 0, -196609, 11, 0, -262144, 11, 0, -262143, 11, 0, -262142, 11, 0, -262141, 11, 0, -262140, 11, 0, -262139, 11, 0, -262138, 11, 0, -262137, 11, 0, -262136, 11, 0, -262135, 11, 0, -262134, 11, 0, -262133, 12, 0, -131076, 13, 0, -196597, 14, 0, -65540, 13, 0, -131061, 14, 0, -4, 13, 0, -1, 0, 0, -65528, 0, 0, -65525, 14, 0, 65532, 13, 0, 11, 14, 0, 131068, 13, 0, 131071, 5, 0, 65536, 5, 0, 65547, 14, 0, 196604, 13, 0, 196607, 5, 0, 131072, 5, 0, 131083, 14, 0, 262140, 13, 0, 196619, 14, 0, 327676, 13, 0, 327679, 0, 0, 262152, 0, 0, 262155, 14, 0, 393212, 13, 0, 327691, 14, 0, 458748, 13, 0, 393227, 14, 0, 524284, 15, 0, 524285, 16, 0, 524286, 16, 0, 524287, 16, 0, 458752, 16, 0, 458753, 16, 0, 458754, 16, 0, 458755, 16, 0, 458756, 16, 0, 458757, 16, 0, 458758, 16, 0, 458759, 16, 0, 458760, 16, 0, 458761, 16, 0, 458762, 16, 0, 458763, 17, 0 )
+
+[node name="slime" parent="." instance=ExtResource( 2 )]
+position = Vector2( -153.107, 117.565 )
+
+[node name="slime2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 627.852, 305.078 )
+
+[node name="slime3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 631.974, -78.1905 )
+
+[node name="person" parent="." instance=ExtResource( 3 )]
+position = Vector2( 252.081, 129.959 )
+speed = 250.0
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="hud" parent="canvas" instance=ExtResource( 4 )]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://title.png" type="Texture" id=1]
+[ext_resource path="res://playbutton1.png" type="Texture" id=2]
+[ext_resource path="res://playbutton2.png" type="Texture" id=3]
+[ext_resource path="res://playbutton3.png" type="Texture" id=4]
+[ext_resource path="res://playbtn.gd" type="Script" id=5]
+[ext_resource path="res://retrofont.tres" type="DynamicFont" id=6]
+
+[node name="mainmenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="logo" type="TextureRect" parent="."]
+margin_left = 12.0
+margin_top = 32.0
+margin_right = 1012.0
+margin_bottom = 288.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="playbtn" type="TextureButton" parent="."]
+margin_left = 312.0
+margin_top = 400.0
+margin_right = 712.0
+margin_bottom = 500.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 548.0
+margin_right = 447.0
+margin_bottom = 596.0
+custom_fonts/font = ExtResource( 6 )
+text = "Made by Jacob Garby"
